@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.DashBoradControler">
+   <children>
+      <ImageView fx:id="UserName" fitHeight="722.0" fitWidth="1061.0" layoutX="24.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new1.png" />
+         </image>
+      </ImageView>
+      <Button id="blue" fx:id="btn" layoutX="596.0" layoutY="539.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #002E74; -fx-background-radius: 20;" stylesheets="@../sheets/stylesheet.css" text="SING UP" textFill="#e5e8ec">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <TextField fx:id="username" layoutX="440.0" layoutY="415.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="346.0" layoutY="419.0" prefHeight="20.0" prefWidth="89.0" text="USER NAME">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="474.0" prefHeight="20.0" prefWidth="89.0" text="PASSWORD">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="worng" layoutX="440.0" layoutY="505.0" />
+      <PasswordField fx:id="password" layoutX="441.0" layoutY="471.0" style="-fx-background-radius: 20;" />
+   </children>
+</AnchorPane>

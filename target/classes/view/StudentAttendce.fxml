@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="678.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.StudentAttendceController">
+   <children>
+      <ImageView fitHeight="793.0" fitWidth="960.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new4.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="StudentId" layoutX="172.0" layoutY="157.0" prefHeight="31.0" prefWidth="198.0" style="-fx-background-radius: 16;" />
+      <TextField fx:id="StudentDate" layoutX="176.0" layoutY="226.0" prefHeight="31.0" prefWidth="198.0" style="-fx-background-radius: 16;" />
+      <TextField fx:id="StudentTime" layoutX="175.0" layoutY="298.0" prefHeight="31.0" prefWidth="198.0" style="-fx-background-radius: 16;" />
+      <ImageView fitHeight="248.0" fitWidth="388.0" layoutX="515.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/attende.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="52.0" layoutY="170.0" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="STUDENT ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="226.0" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="DATE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="298.0" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="TIME" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button id="blue" fx:id="btnCame" layoutX="31.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnCameAction" prefHeight="46.0" prefWidth="126.0" style="-fx-background-radius: 16; -fx-background-color: #ffb701;" stylesheets="@../sheets/new.css" text="CAME" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnDelete" layoutX="174.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="46.0" prefWidth="125.0" style="-fx-background-radius: 16; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="DELETE" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnSearth" layoutX="327.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnSearthAction" prefHeight="46.0" prefWidth="125.0" style="-fx-background-radius: 16; -fx-background-color: #ffb701;" stylesheets="@../sheets/new.css" text="SEARCH" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btn1" layoutX="751.0" layoutY="548.0" mnemonicParsing="false" onAction="#btnBckAction" prefHeight="50.0" prefWidth="106.0" style="-fx-background-color: #ffb701; -fx-background-radius: 35 35 35 35;" stylesheets="@../sheets/new.css" text="BACK" textFill="#002e74">
+         <font>
+            <Font name="Arial Narrow Bold" size="28.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <AnchorPane layoutX="46.0" layoutY="654.0" prefHeight="8.0" prefWidth="857.0" style="-fx-background-color: #002e74;" />
+      <AnchorPane layoutX="59.0" layoutY="639.0" prefHeight="8.0" prefWidth="830.0" style="-fx-background-color: #ffb701;" />
+      <TableView fx:id="tblStudentAt" layoutX="594.0" layoutY="341.0" onMouseClicked="#tblOnAction" prefHeight="193.0" prefWidth="254.0">
+        <columns>
+          <TableColumn fx:id="tbleStudentId" prefWidth="75.0" text="STUDENT ID" />
+          <TableColumn fx:id="studentDate" prefWidth="97.60009765625" text="DATE" />
+            <TableColumn fx:id="Time" prefWidth="83.7333984375" text="TIME" />
+        </columns>
+      </TableView>
+      <Button id="blue" fx:id="btnClear" layoutX="174.0" layoutY="511.0" mnemonicParsing="false" onAction="#btnClearsAction" prefHeight="46.0" prefWidth="125.0" style="-fx-background-radius: 16; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="CLEAR" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="352.0" layoutY="106.0" prefHeight="26.0" prefWidth="94.0" text="TIME">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="427.0" layoutY="106.0" prefHeight="31.0" prefWidth="118.0" textFill="#ffb701">
+         <font>
+            <Font name="Bodoni MT Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

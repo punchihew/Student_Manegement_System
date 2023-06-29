@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ManageTeacherController">
+   <children>
+      <ImageView fitHeight="646.0" fitWidth="902.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new4.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtId" layoutX="130.0" layoutY="165.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtName" layoutX="130.0" layoutY="214.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtAdress" layoutX="130.0" layoutY="267.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtMobile" layoutX="130.0" layoutY="323.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtMAil" layoutX="130.0" layoutY="385.0" style="-fx-background-radius: 12;" />
+      <Button id="blue" fx:id="btnAdd" layoutX="31.0" layoutY="464.0" mnemonicParsing="false" onAction="#btnAddAction" prefHeight="41.0" prefWidth="108.0" style="-fx-background-radius: 12; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="ADD" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Label layoutX="15.0" layoutY="164.0" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" text="TEACHER ID" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="221.0" prefHeight="26.0" prefWidth="70.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" text="NAME" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="274.0" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" text="ADDRESS" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="330.0" prefHeight="26.0" prefWidth="81.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" text="MOBILE" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="384.0" prefHeight="26.0" prefWidth="70.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" text="EMAIL" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="225.0" fitWidth="366.0" layoutX="482.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Teacher.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblTeacherView" layoutX="435.0" layoutY="104.0" onMouseClicked="#tblOnAction" prefHeight="219.0" prefWidth="436.0">
+        <columns>
+          <TableColumn fx:id="tblTeacherId" prefWidth="75.0" text="Teacher Id" />
+            <TableColumn fx:id="tblName" prefWidth="81.59988403320312" text="Name" />
+            <TableColumn fx:id="tblAddress" prefWidth="83.99993896484375" text="Address" />
+            <TableColumn fx:id="tblMobile" prefWidth="101.5999755859375" text="Mobile" />
+          <TableColumn fx:id="tblEmail" prefWidth="91.2000732421875" text="Email" />
+        </columns>
+      </TableView>
+      <Button id="blue" fx:id="btnDelete" layoutX="187.0" layoutY="464.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="41.0" prefWidth="115.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" stylesheets="@../sheets/new.css" text="DELETE" textFill="#f4eded">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Button id="blue" fx:id="btnUpdate" layoutX="31.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnUpdateAction" prefHeight="42.0" prefWidth="126.0" style="-fx-background-radius: 12; -fx-background-color: #FFB701;" stylesheets="@../sheets/new.css" text="UPDATE" textFill="#ece7e7">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Button id="blue" fx:id="btnSearch" layoutX="182.0" layoutY="529.0" mnemonicParsing="false" onAction="#btnSeartchAction" prefHeight="41.0" prefWidth="125.0" style="-fx-background-radius: 12; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="SEARCH" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Button id="blue" fx:id="btnBAcks" layoutX="756.0" layoutY="557.0" mnemonicParsing="false" onAction="#btnBAckAction" prefHeight="43.0" prefWidth="115.0" style="-fx-background-radius: 12; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="BACK" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="98.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-gmail-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="100.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/addresss.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="98.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/contacts.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="100.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="106.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/id.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="6.0" layoutY="640.0" prefHeight="7.0" prefWidth="778.0" style="-fx-background-color: #002e74;" />
+      <AnchorPane layoutX="6.0" layoutY="629.0" prefHeight="7.0" prefWidth="778.0" style="-fx-background-color: #FFB701;" />
+      <Button id="blue" fx:id="btnClaer" layoutX="332.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnClearchAction" prefHeight="41.0" prefWidth="125.0" style="-fx-background-radius: 12; -fx-background-color: #002e74;" stylesheets="@../sheets/new.css" text="CLEAR" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label fx:id="print" layoutX="286.0" layoutY="377.0" prefHeight="66.0" prefWidth="248.0" />
+   </children>
+</AnchorPane>

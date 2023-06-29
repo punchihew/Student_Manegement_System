@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="668.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.PayemantController">
+   <children>
+      <ImageView fitHeight="672.0" fitWidth="943.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="211.0" fitWidth="263.0" layoutX="593.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/payemnt.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtPayId" layoutX="194.0" layoutY="153.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 12;" />
+      <Button id="blue" fx:id="btnBack" layoutX="744.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="43.0" prefWidth="110.0" style="-fx-background-radius: 16; -fx-background-color: #002E74;" stylesheets="@../sheets/new.css" text="BACK">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <TextField fx:id="StudentId" layoutX="199.0" layoutY="214.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtCourseID" layoutX="197.0" layoutY="281.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtFee" layoutX="197.0" layoutY="350.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 12;" />
+      <TableView fx:id="TableViewPayemnt" layoutX="446.0" layoutY="277.0" onMouseClicked="#tblOnAction" prefHeight="257.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="PayID" prefWidth="92.79998779296875" text="PAYEMENT ID" />
+          <TableColumn fx:id="StudentIdd" prefWidth="96.0" text="STUDENT ID" />
+            <TableColumn fx:id="CourseID" prefWidth="84.7999267578125" text="COURSE ID" />
+            <TableColumn fx:id="Fee" prefWidth="104.7999267578125" text="FEE" />
+            <TableColumn fx:id="Dates" prefWidth="118.400146484375" text="DATE" />
+            <TableColumn prefWidth="99.19998168945312" text="STUDENT ID" />
+            <TableColumn prefWidth="99.19998168945312" text="STUDENT ID" />
+            <TableColumn prefWidth="89.5999755859375" text="DATE" />
+        </columns>
+      </TableView>
+      <Button id="blue" fx:id="btnPay" layoutX="26.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnPayemntAction" prefHeight="44.0" prefWidth="102.0" style="-fx-background-position: 17; -fx-background-radius: 16; -fx-background-color: #FFB701;" stylesheets="@../sheets/new.css" text="PAY">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label fx:id="payID" layoutX="59.0" layoutY="151.0" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text="PAYEMNT ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="StudentID" layoutX="58.0" layoutY="211.0" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text="STUDENT ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="courseId" layoutX="58.0" layoutY="277.0" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text="COURSE ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="feeId" layoutX="61.0" layoutY="346.0" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text="FEE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button id="blue" fx:id="btnSearch" layoutX="298.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnSeatchAction" prefHeight="44.0" prefWidth="136.0" style="-fx-background-position: 17; -fx-background-radius: 16; -fx-background-color: #FFB701;" stylesheets="@../sheets/new.css" text="SEARCH">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnDelete" layoutX="137.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="44.0" prefWidth="142.0" style="-fx-background-position: 17; -fx-background-radius: 16; -fx-background-color: #002E74;" stylesheets="@../sheets/new.css" text="DELETE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <AnchorPane layoutX="26.0" layoutY="651.0" prefHeight="6.0" prefWidth="858.0" style="-fx-background-color: #002E74;" />
+      <AnchorPane layoutX="36.0" layoutY="642.0" prefHeight="6.0" prefWidth="835.0" style="-fx-background-color: #FFB701;" />
+      <Label fx:id="date" layoutX="58.0" layoutY="414.0" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text="DATE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="194.0" layoutY="414.0" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 12;" />
+      <Button id="blue" fx:id="btnClear" layoutX="137.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnClaerAction" prefHeight="44.0" prefWidth="142.0" style="-fx-background-position: 17; -fx-background-radius: 16; -fx-background-color: #002E74;" stylesheets="@../sheets/new.css" text="CLEAR">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="395.0" layoutY="141.0" prefHeight="23.0" prefWidth="78.0" text="DATE" textFill="#ffb701">
+         <font>
+            <Font name="Cooper Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="465.0" layoutY="137.0" prefHeight="32.0" prefWidth="142.0" textFill="#002e74">
+         <font>
+            <Font name="Malgun Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button id="blue" fx:id="btnClear1" layoutX="295.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnReportAction" prefHeight="44.0" prefWidth="142.0" style="-fx-background-position: 17; -fx-background-radius: 16; -fx-background-color: #FFB701;" stylesheets="@../sheets/new.css" text="REPOTR ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

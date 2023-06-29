@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="664.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.HomepageControoler">
+   <children>
+      <AnchorPane fx:id="root" layoutY="9.0" prefHeight="57.0" prefWidth="761.0" />
+      <ImageView fitHeight="671.0" fitWidth="930.0" layoutX="-2.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/NEW .png" />
+         </image>
+      </ImageView>
+      <Button id="blue" fx:id="btn1" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Manage Student" textFill="#002e74" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="708.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <Button id="blue" fx:id="btn2" layoutX="8.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnAddMissionAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Manage Addmision" />
+      <Button id="blue" fx:id="btn3" layoutX="8.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnTeacherAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Manage Teacher" />
+      <Button id="blue" fx:id="btn4" layoutX="8.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnCourseaction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Manage Course" />
+      <Button id="blue" fx:id="btn5" layoutX="8.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnAttendceAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Attendence" />
+      <Button id="blue" fx:id="btn7" layoutX="8.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnPayemntActioon" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Payment" />
+      <Button id="blue" fx:id="btn8" layoutX="8.0" layoutY="557.0" mnemonicParsing="false" onAction="#btnSalaryAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Salary" />
+      <Button id="blue" fx:id="btn9" layoutX="8.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnExamAction" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="Exam" />
+      <ImageView fitHeight="279.0" fitWidth="606.0" layoutX="415.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/picture1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="235.0" layoutY="-2.0" prefHeight="54.0" prefWidth="691.0" style="-fx-background-color: #FFB701;" />
+      <Text fill="#002e74" layoutX="361.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pioneer Institute of Business &amp; Technology Since 2000" wrappingWidth="318.6700744628906">
+         <font>
+            <Font name="Leelawadee UI Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="#ffb701" layoutX="480.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summit has been a Insisituteof choice sire 2000 for families in Cincinna and Northernindependent, The summit is a leader in eary childhood education, Students thrive in aVISIT THE SUMMITContact us for a personal tour to" wrappingWidth="292.0035095214844">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <Button id="blue" fx:id="back" layoutX="762.0" layoutY="557.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="38.0" prefWidth="127.0" style="-fx-background-radius: 20;" stylesheets="@../sheets/new.css" text="LOGOUT" textFill="#002e74">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

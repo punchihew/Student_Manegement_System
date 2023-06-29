@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.SalaryController">
+   <children>
+      <ImageView fitHeight="678.0" fitWidth="944.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="248.0" fitWidth="359.0" layoutX="529.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/salary.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtPayId" layoutX="187.0" layoutY="132.0" prefHeight="34.0" prefWidth="186.0" style="-fx-background-radius: 16;" />
+      <TextField fx:id="txtTeacherId" layoutX="179.0" layoutY="202.0" prefHeight="34.0" prefWidth="186.0" style="-fx-background-radius: 16;" />
+      <TextField fx:id="txtFee" layoutX="181.0" layoutY="341.0" prefHeight="34.0" prefWidth="186.0" style="-fx-background-radius: 16;" />
+      <TextField fx:id="txtDate" layoutX="179.0" layoutY="273.0" prefHeight="34.0" prefWidth="186.0" style="-fx-background-radius: 16;" />
+      <TextField layoutX="179.0" layoutY="415.0" prefHeight="34.0" prefWidth="186.0" style="-fx-background-radius: 16;" />
+      <Label layoutX="55.0" layoutY="132.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="PAYEMNT ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="205.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="TEACHER ID" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="273.0" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="DATE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="342.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="PAYEMNT FEE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="419.0" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #002e74; -fx-background-radius: 12;" text="DESC" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button id="blue" fx:id="btnPay" layoutX="65.0" layoutY="532.0" mnemonicParsing="false" onAction="#btnPayAction" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #ffb701; -fx-background-radius: 18;" stylesheets="@../sheets/new.css" text="PAY UP" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnBackAction" layoutX="792.0" layoutY="566.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="51.0" prefWidth="104.0" style="-fx-background-color: #ffb701; -fx-background-radius: 16;" stylesheets="@../sheets/new.css" text="BACK" textFill="#002e74">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btndelete" layoutX="194.0" layoutY="532.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #002e74; -fx-background-radius: 18;" stylesheets="@../sheets/new.css" text="DELETE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnSerath" layoutX="320.0" layoutY="530.0" mnemonicParsing="false" onAction="#btnsearthAction" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: #ffb701; -fx-background-radius: 18;" stylesheets="@../sheets/new.css" text="SEARTH" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <TableView fx:id="TableViewSalary" layoutX="504.0" layoutY="352.0" onMouseClicked="#tblOnAction" prefHeight="212.0" prefWidth="317.0">
+        <columns>
+          <TableColumn fx:id="SalaryIDD" prefWidth="63.46673583984375" text="S ID" />
+          <TableColumn fx:id="TeacID" prefWidth="69.0667724609375" text="T ID" />
+            <TableColumn fx:id="Dates" prefWidth="89.59991455078125" text="DATE" />
+            <TableColumn fx:id="Fee" prefWidth="88.5333251953125" text="FEE" />
+        </columns>
+      </TableView>
+      <Button id="blue" fx:id="btnClear" layoutX="194.0" layoutY="596.0" mnemonicParsing="false" onAction="#btnClearAction" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #002e74; -fx-background-radius: 18;" stylesheets="@../sheets/new.css" text="CLEAR" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Label layoutX="356.0" layoutY="97.0" prefHeight="34.0" prefWidth="106.0" text="DATE" textFill="#ffb701">
+         <font>
+            <Font name="Cooper Black" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tblDate" layoutX="443.0" layoutY="98.0" prefHeight="34.0" prefWidth="145.0" textFill="#002e74">
+         <font>
+            <Font name="Malgun Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

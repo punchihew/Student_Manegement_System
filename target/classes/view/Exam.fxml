@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="662.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ExamController">
+   <children>
+      <ImageView fitHeight="655.0" fitWidth="933.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/new4.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtstudentId" layoutX="173.0" layoutY="148.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtCourseId" layoutX="173.0" layoutY="205.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtCoursename" layoutX="173.0" layoutY="266.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtSubject" layoutX="173.0" layoutY="326.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 12;" />
+      <TextField fx:id="txtMarks" layoutX="173.0" layoutY="387.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 12;" />
+      <Label layoutX="56.0" layoutY="153.0" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 12;" />
+      <Button id="blue" fx:id="btnAdds" layoutX="28.0" layoutY="487.0" mnemonicParsing="false" onAction="#btnAddActions" prefHeight="42.0" prefWidth="103.0" style="-fx-background-radius: 16; -fx-background-color: #002E74;" stylesheets="@../sheets/new.css" text="ADD" textFill="#efdfdf">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <TableView fx:id="tblExam" layoutX="461.0" layoutY="148.0" onMouseClicked="#tblOnAction" prefHeight="264.0" prefWidth="434.0">
+        <columns>
+          <TableColumn fx:id="studentID" prefWidth="89.5999755859375" text="STUDENT ID" />
+          <TableColumn fx:id="courseId" text="COURSE ID" />
+            <TableColumn fx:id="name" prefWidth="87.2000732421875" text=" NAME " />
+            <TableColumn fx:id="subject" prefWidth="95.199951171875" text="SUBJECT" />
+            <TableColumn fx:id="marks" prefWidth="80.800048828125" text="MARKS" />
+        </columns>
+      </TableView>
+      <Label layoutX="66.0" layoutY="153.0" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text=" STUDENT" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="66.0" layoutY="266.0" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text=" NAME" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="66.0" layoutY="326.0" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text=" SUBJECT" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="66.0" layoutY="387.0" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text=" MARKS" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="66.0" layoutY="205.0" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: #002E74; -fx-background-radius: 16;" text=" COURSE" textFill="#ffb701">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button id="blue" fx:id="btnSearch" layoutX="150.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnSearchAction" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 16; -fx-background-color: #ffb701;" stylesheets="@../sheets/new.css" text="SEARCH">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Button id="blue" fx:id="btnDelete" layoutX="305.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="42.0" prefWidth="123.0" style="-fx-background-radius: 16; -fx-background-color: #002E74;" stylesheets="@../sheets/new.css" text="DELETE" textFill="#dfd7d7">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <ImageView fitHeight="221.0" fitWidth="354.0" layoutX="461.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/exam.png" />
+         </image></ImageView>
+      <Button id="blue" fx:id="btnBack" layoutX="791.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="47.0" prefWidth="111.0" style="-fx-background-color: #ffb701; -fx-background-radius: 16;" stylesheets="@../sheets/new.css" text="BACK">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <Button id="blue" fx:id="btnClear" layoutX="150.0" layoutY="563.0" mnemonicParsing="false" onAction="#btnClearAction" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 16; -fx-background-color: #ffb701;" stylesheets="@../sheets/new.css" text="CLERA">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
